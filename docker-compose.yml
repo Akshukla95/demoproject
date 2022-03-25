@@ -16,10 +16,6 @@ services:
         restart: on-failure
     backend:
         build: ./backend
-        environment:
-            MYSQL_DATABASE: employees_db
-            MYSQL_USER: root
-            MYSQL_PASSWORD: root
         network_mode: host
         depends_on:
             - database
